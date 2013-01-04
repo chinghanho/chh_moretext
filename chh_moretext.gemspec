@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["chh@chh.tw"]
   gem.description   = %q{Generate random Traditional Chinese text from Moretext API}
   gem.summary       = %q{Generate random Traditional Chinese text from Moretext API}
-  gem.homepage = "https://github.com/chinghanho/chh-moretext"
+  gem.homepage = "https://github.com/chinghanho/chh_moretext"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
