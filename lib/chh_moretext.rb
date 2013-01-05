@@ -16,11 +16,7 @@ module ChhMoretext
           limit = nil
         end
 
-        if limit.nil?
-          condition = "?#{number}"
-        else
-          condition = "?#{number}&#{limit}"
-        end
+        condition = limit.nil? ? "?#{number}" : "?#{number}&#{limit}"
         return JSON(open("http://more.handlino.com/sentences.json#{condition}").read)["sentences"]
       end
     end
