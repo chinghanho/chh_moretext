@@ -47,6 +47,12 @@ ChhMoretext::Moretext.paragraphs(5)
 # 也可以指定要有幾個段落
 ```
 
+## Issues
+
+目前已知的問題……
+
+* limit 如果設一個字，例如給出 /sentences.json?n=3&limit=1 這個 URL 請求，Moretext 伺服器就會死機好一陣子；
+
 ## TODO
 
 * 目前每呼叫一個方法就是一個 request，造成產生假文的速度非常緩慢，打算弄個「快取層」先把資料抓來，呼叫方法時從快取裡面去拿；
