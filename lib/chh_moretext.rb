@@ -7,19 +7,20 @@ module ChhMoretext
     class << self
       def fetch_moretext(number, limit)
         number = "n=#{number}"
-
-        if limit.is_a?(Range)
-          limit = "limit=#{limit.min},#{limit.max}"
-        elsif limit.is_a?(Integer)
-          limit = "limit=#{limit}"
-        else
-          limit = nil
-        end
-
+        limit  = parse(limit)
         condition = limit.nil? ? "?#{number}" : "?#{number}&#{limit}"
         return JSON(open("http://more.handlino.com/sentences.json#{condition}").read)["sentences"]
       end
     end
+
+    private
+      def self.parse(type)
+        case type
+        when Range   then "limit=#{type.min},#{type.max}"
+        when Integer then "limit=#{type}"
+        else nil
+        end
+      end
   end
 end
 
