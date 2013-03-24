@@ -6,7 +6,6 @@ require 'chh_moretext/version'
 Gem::Specification.new do |gem|
   gem.name          = "chh_moretext"
   gem.version       = ChhMoretext::VERSION
-  gem.date          = %q{2013-01-04}
   gem.authors       = ["CHH"]
   gem.email         = ["chh@chh.tw"]
   gem.description   = %q{Generate random Traditional Chinese text from Moretext API}
