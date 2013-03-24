@@ -4,12 +4,14 @@ require "open-uri"
 
 module ChhMoretext
   class Base
+    MORETEXT_API_URL = "http://more.handlino.com/sentences.json"
+
     class << self
       def fetch_moretext(number, limit)
         number = "n=#{number}"
         limit  = parse(limit)
         condition = limit.nil? ? "?#{number}" : "?#{number}&#{limit}"
-        return JSON(open("http://more.handlino.com/sentences.json#{condition}").read)["sentences"]
+        return JSON(open("#{MORETEXT_API_URL}#{condition}").read)["sentences"]
       end
     end
 
