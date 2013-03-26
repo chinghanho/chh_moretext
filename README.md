@@ -47,12 +47,6 @@ ChhMoretext::Moretext.paragraphs(5)
 # 也可以指定要有幾個段落
 ```
 
-## TODO
-
-* 目前每呼叫一個方法就是一個 request，造成產生假文的速度非常緩慢，打算弄個「快取層」先把資料抓來，呼叫方法時從快取裡面去拿；
-* 目前的 `paragraphs` 方法是將 `sentences` 用 `"\r\n\r\n"` 合併的，應該讓開發者可以自訂要用什麼拼接，例如用 HTML 的 `<p></p>` 等等；
-* 想做一個中文姓名產生器……
-
 ## Contributing
 
 1. Fork it
