@@ -54,3 +54,9 @@ ChhMoretext::Moretext.paragraphs(5)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Changelog
+
+### 0.1.6
+
+* Fixed `sentence` method: callback type should be String rather than Array.
