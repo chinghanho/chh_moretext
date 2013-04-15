@@ -10,7 +10,9 @@ Gem::Specification.new do |gem|
   gem.email         = ["chh@chh.tw"]
   gem.description   = %q{Generate random Traditional Chinese text from Moretext API}
   gem.summary       = %q{Generate random Traditional Chinese text from Moretext API}
-  gem.homepage = "https://github.com/chinghanho/chh_moretext"
+  gem.homepage      = "https://github.com/chinghanho/chh_moretext"
+
+  gem.add_runtime_dependency("faraday_middleware", '~> 0.9.0')
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
