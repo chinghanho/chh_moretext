@@ -1,7 +1,5 @@
 module ChhMoretext
   module Request
-    MORETEXT_DEFAULT_ENDPOINT = "http://more.handlino.com"
-
     def fetch_moretext(number, limit)
       number = {:n => "#{number}".to_i}
       limit  = parse(limit)
@@ -16,7 +14,7 @@ module ChhMoretext
         options = {
           :headers => { "Accept" => "application/json",
                         "User-Agent" => "ChhMoretext Ruby Gem #{ChhMoretext::VERSION}" },
-          :url => MORETEXT_DEFAULT_ENDPOINT,
+          :url => Configuration::MORETEXT_DEFAULT_ENDPOINT,
         }
 
         Faraday.new(options) do |conn|

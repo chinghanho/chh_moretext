@@ -1,5 +1,5 @@
-require "chh_moretext/version"
 require "chh_moretext/request"
+require "chh_moretext/configuration"
 require "faraday_middleware"
 
 module ChhMoretext
