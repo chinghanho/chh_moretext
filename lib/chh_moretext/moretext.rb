@@ -2,7 +2,7 @@ module ChhMoretext
   class Moretext < Base
     class << self
       def sentence(sentence_length_range = nil)
-        fetch_moretext(1, sentence_length_range)
+        fetch_moretext(1, sentence_length_range)[0]
       end
 
       def sentences(sentence_count = 1, sentence_length_range = nil)
