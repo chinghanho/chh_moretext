@@ -60,3 +60,7 @@ ChhMoretext::Moretext.paragraphs(5)
 ### 0.1.6
 
 * Fixed `sentence` method: callback type should be String rather than Array.
+
+### 0.1.7
+
+* Fixed "uninitialized constant ChhMoretext::VERSION"
