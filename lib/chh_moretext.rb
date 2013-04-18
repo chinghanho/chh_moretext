@@ -1,6 +1,7 @@
 require "chh_moretext/request"
 require "chh_moretext/configuration"
 require "faraday_middleware"
+require "chh_moretext/version"
 
 module ChhMoretext
   class Base
